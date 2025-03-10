@@ -1,19 +1,25 @@
-import { useState, useEffect, useCallback } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import RealTimeInputDisaplay from './components/RealTimeInput'
-import ToggleSwitch from './components/ToggleSwitch'
-import UserProfile from './components/UserProfile'
+import { useState, useEffect } from "react";
 import './App.css'
 
-function App() {
- 
+function Home() {
+  const [count, setCount] = useState(0);
+  const [data, setData] = useState('');
+
+  const handleChange = (e) => {
+    setData(e.target.value)
+  }
+
+  useEffect(() => {
+    setCount((count) => count + 1);
+  }, [data]);
+
   return (
-    <div>
-      <UserProfile />
-    </div>
-  )
+    <>
+      <input onChange={handleChange} value={data} className="border"/>
+      <p>{count}</p>
+    </>
+  );
 }
 
-export default App;
+export default Home;
 
