@@ -1,25 +1,16 @@
 import { useState, useEffect } from "react";
 import './App.css'
+import Counter from "./components/Counter";
+import { CounterProvider } from "./contexts/Counter";
 
-function Home() {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState('');
-
-  const handleChange = (e) => {
-    setData(e.target.value)
-  }
-
-  useEffect(() => {
-    setCount((count) => count + 1);
-  }, [data]);
-
+function App() {
   return (
-    <>
-      <input onChange={handleChange} value={data} className="border"/>
-      <p>{count}</p>
-    </>
+    <div>
+      <h1>Context API Counter</h1>
+      <Counter />
+    </div>
   );
 }
 
-export default Home;
+export default App;
 
