@@ -1,12 +1,18 @@
-# React + Vite
+# Mega Blog using appwrite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully functional Blog Website built using Appwrite BaaS as the backend. The project allows users to create, read, update, and delete blog posts efficiently. Appwrite is used for authentication, database management, and storage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+User authentication (Sign Up, Login, Logout)
+Create, Read, Update, and Delete (CRUD) blog posts
+Image upload support for blog posts
+Secure database management with Appwrite
+Responsive UI for a seamless user experience
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sign Up as a new user or Login if you already have an account.
+Create new blog posts with a title, content, and image.
+Edit or delete your posts as needed.
+Browse through posts by other users.
