@@ -4,11 +4,11 @@ This is a fully functional Blog Website built using Appwrite BaaS as the backend
 
 ## Features
 
-User authentication (Sign Up, Login, Logout)
-Create, Read, Update, and Delete (CRUD) blog posts
-Image upload support for blog posts
-Secure database management with Appwrite
-Responsive UI for a seamless user experience
+User authentication (Sign Up, Login, Logout),
+Create, Read, Update, and Delete (CRUD) blog posts,
+Image upload support for blog posts,
+Secure database management with Appwrite,
+Responsive UI for a seamless user experience,
 
 ## Usage
 
