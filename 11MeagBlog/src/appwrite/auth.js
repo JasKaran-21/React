@@ -30,25 +30,28 @@ export class AuthService {
         try {
             return await this.account.createEmailPasswordSession(email, password);
         } catch (error) {
-            throw error;
+            console.log("AuthService :: login :: error", error);
+            // throw error;
         }
     }
 
-    async currentUser() {
+    async getCurrentUser() {
         try {
             return await this.account.get();
         } catch (error) {
-            throw error;
+            console.log("AuthService :: getcurrentUser :: error", error);
+            // throw error;
         }
 
-        return null;
+        // return null;
     }
 
     async logout() {
         try {
             await this.account.deleteSessions();
         } catch (error) {
-            throw error;
+            console.log("AuthService :: logout :: error", error);
+            // throw error;
         }
     }
 }
