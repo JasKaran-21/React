@@ -40,10 +40,9 @@ export class AuthService {
             return await this.account.get();
         } catch (error) {
             console.log("AuthService :: getcurrentUser :: error", error);
-            // throw error;
         }
 
-        // return null;
+        return null;
     }
 
     async logout() {
