@@ -13,16 +13,16 @@ function Login() {
     const [error, setError] = useState('')
 
     const login = async (data) => {
-        setError('')
+        setError('') // Clear previous errors before making the request
         try {
             const session = await authService.login(data)
-            if (session) {
-                const userData = await authService.getCurrentUser()
-                if (userData) dispatch(authLogin(userData));
-                navigate('/')
+            if (session) {     // If login is successful
+                const userData = await authService.getCurrentUser()     // Fetch user details
+                if (userData) dispatch(authLogin(userData));     // Store user details in Redux state
+                navigate('/')     // Redirect to the home page
             }
         } catch (error) {
-            setError(error.message)
+            setError(error.message)  // Display error message if login fails
         }
     }
 
